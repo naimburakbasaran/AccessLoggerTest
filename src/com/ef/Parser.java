@@ -1,5 +1,7 @@
 package com.ef;
 
+import com.ef.utility.StringTools;
+
 public class Parser {
 
     public static void main(String[] args) {
@@ -20,22 +22,19 @@ public class Parser {
             System.out.println("Error occured reading parameters please use --startDate  --duration --thresold --accesslog wisely");
             return;
         }
-        if(isEmpty(startDate)){
+        if(StringTools.isEmpty(startDate)){
             System.out.println("--startDate parameter is required");
             return;
         }
-        if(isEmpty(duration)){
+        if(StringTools.isEmpty(duration)){
             System.out.println("--duration parameter is required");
             return;
         }
-        if(isEmpty(thresold)){
+        if(StringTools.isEmpty(thresold)){
             System.out.println("--thresold parameter is required");
             return;
         }
 
     }
 
-    private static boolean isEmpty(String val){
-        return null==val || "".equalsIgnoreCase(val);
-    }
 }

@@ -104,4 +104,6 @@ public class DbOperationsHelper {
         }
     }
 
+    public static void insertLogList(ArrayList<LogLine> logLines) {
+    }
 }
